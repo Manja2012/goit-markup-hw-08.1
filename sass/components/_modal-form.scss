@@ -1,15 +1,20 @@
 .form{
     padding: 40px; 
 }
+
 .form__title{
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     
     color: var(--text-color);
+
+    @media screen and (min-width:1199px){
+    line-height: 1.15;
+    }
 }
 .form__field{ 
     position: relative;
@@ -69,7 +74,9 @@
     }
 }
 .form__link{
-       color: var(--accent-color);
+    color: var(--accent-color);
+
+
 }
 .form__checkbox{
     position: absolute;
@@ -105,13 +112,17 @@
     justify-content: center;
     align-items: center;
 
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     
     color:var(--text-contacts-color);
-}
 
+    @media screen and (max-width:1199px){
+        font-size: 14px;
+        line-height: 1.71;
+        }
+}
 .input-icon{
     position: absolute;
     top: 11px;
