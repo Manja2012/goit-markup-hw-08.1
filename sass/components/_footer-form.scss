@@ -1,28 +1,39 @@
 .footer-form{
-    // display: flex;
-    // flex-direction: column;
-    // margin-left: 93px;
-    @media screen and (min-width:480px){
     margin-top: 60px;
-    text-align: center;
+
+    @media screen and (min-width:480px) and (max-width:1199px){
+     text-align: center;
+    }
+ 
+    @media screen and (min-width:1200px){
+    display: flex;
+    flex-direction: column;
+    margin-left: 93px;
+    }
+
+    &__cta{
+    @media screen and (min-width:1200px){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    }
+
+    &__input{
+    display: block;
+    padding: 15px 16px;
+    @media screen and (min-width:480px) and (max-width:1199px){
+    margin:0 auto 20px auto;
     }
   
-    // &__cta{
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
-    // }
- 
+    @media screen and (min-width:1200px){
+    margin-right: 12px;
+    width: 358px;
+    }
     
-    &__input{
-    padding: 15px 16px;
-    margin-bottom: 20px;
-    // margin-right: 12px;
-    // width: 358px;
     width: 450px;
     height: 50px;
-
+ 
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -42,13 +53,13 @@
 
     color: var(--main-background-color);
     }
-
 }
 .button--subscribe{
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    padding: 10px 10px 10px 29px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 10px 10px 10px 29px;
+   margin: 0 auto;
 }
 .button__icon{
     margin-left: 10px;
