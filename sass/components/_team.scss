@@ -13,7 +13,7 @@
     text-align: center;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    width: 450px;
+    max-width: 450px;
 
     background-color: var(--main-background-color);
 
@@ -29,10 +29,6 @@
     }
     
     .team &:not(:last-child){
-    @media screen and (min-width:480px){
-    margin-bottom: 30px;
-    }
-    
     @media screen and (min-width:1200px){
     margin-right: 30px;
     }

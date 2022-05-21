@@ -16,12 +16,78 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    background-image: linear-gradient(
+            to right,
+            rgba(1, 12, 129, 0.4),
+            rgba(47, 48, 58 ,0.4)), 
+            url('../../images/Header-mob.jpg');
+            background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media ( min-device-pixel-ratio: 2),
+            (min-resolution:192dpi),
+            (min-resolution:2dppx){
+            background-image:linear-gradient(
+            to right,
+            rgba(1, 12, 129, 0.4),
+            rgba(47, 48, 58 ,0.4)), 
+             url('../../images/Header-mob2.jpg') ;
+             background-repeat: no-repeat;
+             background-position: center;
+             background-size: cover;
+    }
+  
+    @media screen and (min-width:768px) and (max-width:1199px){
+        background-image:linear-gradient(
+            to right,
+            rgba(1, 12, 129, 0.4),
+            rgba(47, 48, 58 ,0.4)), 
+            url('../../images/Header-tab2.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+    @media ( min-device-pixel-ratio: 2),
+           (min-resolution:192dpi),
+           (min-resolution:2dppx){
+            background-image:linear-gradient(
+            to right,
+            rgba(1, 12, 129, 0.4),
+            rgba(47, 48, 58 ,0.4)), 
+            url('../../images/Header-tab.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            }
+    }
    
     @media screen and (min-width:1200px){
     padding-top: 200px;
     padding-bottom: 200px; 
     max-width: 1600px;
-     }
+
+    @media ( min-device-pixel-ratio: 2),
+            (min-resolution:192dpi),
+            (min-resolution:2dppx){
+            background-image:linear-gradient(
+            to right,
+            rgba(1, 12, 129, 0.4),
+            rgba(47, 48, 58 ,0.4)), 
+             url('../../images/Header-dekstop2.jpg');
+             background-repeat: no-repeat;
+             background-position: center;
+             background-size: cover;
+            }
+    background-image:linear-gradient(
+        to right,
+        rgba(1, 12, 129, 0.4),
+        rgba(47, 48, 58 ,0.4)), 
+         url('../../images/Header-dekstop.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+    }
     
     &__title {
     margin-bottom:30px;
@@ -38,7 +104,7 @@
         line-height: 1.36;
     }
     }  
-}
+} 
 .button{
     font-family: inherit;
     background-color: var(--accent-color);

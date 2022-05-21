@@ -14,35 +14,86 @@
 </head>
 <body>
   <header class="header">
-    <div class="container header__container">   
-            <a class="logo header__logo" href="#"> Web<span class="logo__dark">Studio</span></a>
-        <nav >
-            <ul class="nav">
-                <li class="nav__item" ><a class="nav__link "  href="./index.html">Студия</a> </li>
-                <li class="nav__item"><a class="nav__link nav__link--current  " href="./portfolio.html">Портфолио </a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
-            </ul>
-        </nav>   
-        <ul class="contacts-nav ">
-            <li class="contacts-nav__item"> 
-              <a class="contacts-nav__link contacts-nav__link--header " href="mailto:info@devstudio.com">
-                 <svg class="contacts-nav__icon" width="16" height="12">
-                  <use  href="./images/icos.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com
-              </a>
+    <div class="container header__container">  
+     <div class="mobil-menu" id="mobil-menu" data-menu>
+       <ul class="mobil-menu__nav">
+            <li class="mobil-menu__item" >
+              <a class="mobil-menu__link "  href="./index.html">Студия</a>
+             </li>
+            <li class="mobil-menu__item">
+              <a class="mobil-menu__link mobil-menu__link--current " href="./portfolio.html">Портфолио </a>
             </li>
-            <li class="contacts-nav__item "> 
-               <a class="contacts-nav__link contacts-nav__link--header" href="tel:+380961111111">
-                 <svg class="contacts-nav__icon" width="10" height="16">
-                  <use href="./images/icos.svg#icon-smartphone"></use>
-                </svg>
-                 +38 096 111 11 11
-               </a>
+            <li class="mobil-menu__item">
+              <a class="mobil-menu__link" href="#">Контакты</a>
             </li>
-        </ul>
-       </div>
-    </header>
+       </ul>
+       <ul class="mobil-contacts">
+          <li class="mobil-contacts__item "> 
+             <a class="mobil-contacts__link mobil-contacts__phone" href="tel:+380961111111">
+               +38 096 111 11 11
+             </a>
+          </li>
+          <li class="mobil-contacts__item"> 
+            <a class="mobil-contacts__link mobil-contacts__email " href="mailto:info@devstudio.com">
+              info@devstudio.com
+            </a>
+          </li>
+       </ul>
+       <ul class="mobil-social">
+            <li class="mobil-social__item">
+              <a class="mobil-social__link">Instagram</a>
+            </li>
+            <li class="mobil-social__item">
+              <a class="mobil-social__link">Twitter</a>
+            </li>
+            <li class="mobil-social__item">
+              <a class="mobil-social__link">Facebook</a>
+            </li>
+            <li class="mobil-social__item">
+              <a class="mobil-social__link">LinkedIn</a>
+            </li>
+       </ul>
+    </div>
+   <div class="mobil-header">
+           <a class="logo header__logo" href="#"> Web<span class="logo__dark">Studio</span></a>
+        <button class="menu-button" 
+        type="button" 
+        aria-expanded="false" 
+        aria-controls="mobil-menu"
+        data-menu-button>
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="menu-button__icon-close" href="./images/icos.svg#icon-close_40px"></use>
+              <use class="menu-button__icon-menu" href="./images/icos.svg#icon-menu"></use>
+          </svg>
+          </button>
+        </div>
+         <nav >
+              <ul class="nav">
+                  <li class="nav__item" ><a class="nav__link "  href="./index.html">Студия</a> </li>
+                  <li class="nav__item"><a class="nav__link nav__link--current " href="./portfolio.html">Портфолио </a></li>
+                  <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+              </ul>
+          </nav>   
+          <ul class="contacts-nav ">
+              <li class="contacts-nav__item"> 
+                <a class="contacts-nav__link contacts-nav__link--header " href="mailto:info@devstudio.com">
+                   <svg class="contacts-nav__icon" width="16" height="12">
+                    <use  href="./images/icos.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="contacts-nav__item "> 
+                 <a class="contacts-nav__link contacts-nav__link--header" href="tel:+380961111111">
+                   <svg class="contacts-nav__icon" width="10" height="16">
+                    <use href="./images/icos.svg#icon-smartphone"></use>
+                  </svg>
+                   +38 096 111 11 11
+                 </a>
+              </li>
+          </ul>
+         </div>
+      </header>
     <main>  
      <section class="section">
         <div class="container">
@@ -58,8 +109,13 @@
                 <li class="projects__item">
                   <a class="projects__link" href="#">
                     <div class="projects__overlay">
-                    <img src="./images/pic21.jpg" alt="Фото членов команды" width="370"> 
-                    <p class="projects__overlay-text">Ресурс предлагает комплексные предложения 
+                      <picture>
+                        <source srcset="./images/project1-mob.jpg 1x, ./images/project1-mob2.jpg 2x" media="(max-width:767px)">
+                        <source srcset="./images/project1-tab.jpg 1x, ./images/project1-tab2.jpg 2x" media="(max-width:1199px)">
+                        <source srcset="./images/project1-dekstop.jpg 1x, ./images/project1-dekstop2.jpg 2x" media="(min-width:1200px)">
+                        <img src="./images/pic21.jpg" alt="Фото членов команды" > 
+                         </picture> 
+                         <p class="projects__overlay-text">Ресурс предлагает комплексные предложения 
                       с разным уровнем функционала и сервисов. 
                       Все это позволит посетителю получить исчерпывающие
                        сведения 
@@ -74,7 +130,12 @@
                 <li class="projects__item">
                   <a class="projects__link" href="#">
                     <div class="projects__overlay">
-                    <img src="./images/pic22.jpg" alt="Баскетболисты" width="370" >
+                      <picture>
+                        <source srcset="./images/project2-mob.jpg 1x, ./images/project2-mob2.jpg 2x" media="(max-width:767px)">
+                        <source srcset="./images/project2-tab.jpg 1x, ./images/project2-tab2.jpg 2x" media="(max-width:1199px)">
+                        <source srcset="./images/project2-dekstop.jpg 1x, ./images/project2-dekstop2.jpg 2x" media="(min-width:1200px)">
+                        <img src="./images/pic22.jpg" alt="Баскетболисты" >
+                         </picture> 
                     <p class="projects__overlay-text">Ресурс предлагает комплексные предложения 
                       с разным уровнем функционала и сервисов. 
                       Все это позволит посетителю получить исчерпывающие
@@ -90,7 +151,12 @@
                 <li class="projects__item">
                   <a class="projects__link" href="#">
                     <div class="projects__overlay">
-                    <img src="./images/pic23.jpg" alt="Логотип ресторана" width="370" >
+                      <picture>
+                        <source srcset="./images/project3-mob.jpg 1x, ./images/project3-mob2.jpg 2x" media="(max-width:767px)">
+                        <source srcset="./images/project3-tab.jpg 1x, ./images/project3-tab2.jpg 2x" media="(max-width:1199px)">
+                        <source srcset="./images/project3-dekstop.jpg 1x, ./images/project3-dekstop2.jpg 2x" media="(min-width:1200px)">
+                        <img src="./images/pic23.jpg" alt="Логотип ресторана">
+                         </picture> 
                     <p class="projects__overlay-text">Ресурс предлагает комплексные предложения 
                       с разным уровнем функционала и сервисов. 
                       Все это позволит посетителю получить исчерпывающие
@@ -106,7 +172,12 @@
                 <li class="projects__item">
                   <a class="projects__link" href="#">
                     <div class="projects__overlay">
-                    <img src="./images/pic24.jpg" alt="Наушники" width="370" >
+                      <picture>
+                        <source srcset="./images/project4-mob.jpg 1x, ./images/project4-mob2.jpg 2x" media="(max-width:767px)">
+                        <source srcset="./images/project4-tab.jpg 1x, ./images/project4-tab2.jpg 2x" media="(max-width:1199px)">
+                        <source srcset="./images/project4-dekstop.jpg 1x, ./images/project4-dekstop2.jpg 2x" media="(min-width:1200px)">
+                         <img src="./images/pic24.jpg" alt="Наушники">
+                         </picture> 
                     <p class="projects__overlay-text">Ресурс предлагает комплексные предложения 
                       с разным уровнем функционала и сервисов. 
                       Все это позволит посетителю получить исчерпывающие
@@ -122,7 +193,12 @@
                 <li class="projects__item">
                   <a class="projects__link" href="#">
                     <div class="projects__overlay">
-                    <img src="./images/pic25.jpg" alt="Коробки" width="370" >
+                      <picture>
+                        <source srcset="./images/project5-mob.jpg 1x, ./images/project5-mob2.jpg 2x" media="(max-width:767px)">
+                        <source srcset="./images/project5-tab.jpg 1x, ./images/project5-tab2.jpg 2x" media="(max-width:1199px)">
+                        <source srcset="./images/project5-dekstop.jpg 1x, ./images/project5-dekstop2.jpg 2x" media="(min-width:1200px)">
+                        <img src="./images/pic25.jpg" alt="Коробки" >
+                         </picture> 
                     <p class="projects__overlay-text">Ресурс предлагает комплексные предложения 
                       с разным уровнем функционала и сервисов. 
                       Все это позволит посетителю получить исчерпывающие
@@ -138,7 +214,12 @@
                 <li class="projects__item">
                   <a  class="projects__link"href="#">
                     <div class="projects__overlay">
-                    <img src="./images/pic26.jpg" alt="Монитор" width="370" >
+                      <picture>
+                        <source srcset="./images/project6-mob.jpg 1x, ./images/project6-mob2.jpg 2x" media="(max-width:767px)">
+                        <source srcset="./images/project6-tab.jpg 1x, ./images/project6-tab2.jpg 2x" media="(max-width:1199px)">
+                        <source srcset="./images/project6-dekstop.jpg 1x, ./images/project6-dekstop2.jpg 2x" media="(min-width:1200px)">
+                        <img src="./images/pic26.jpg" alt="Монитор">
+                         </picture> 
                     <p class="projects__overlay-text">Ресурс предлагает комплексные предложения 
                       с разным уровнем функционала и сервисов. 
                       Все это позволит посетителю получить исчерпывающие
@@ -154,7 +235,12 @@
                 <li class="projects__item">
                   <a class="projects__link" href="#">
                     <div class="projects__overlay">
-                    <img src="./images/pic27.jpg" alt="Журнал" width="370" >
+                      <picture>
+                        <source srcset="./images/project7-mob.jpg 1x, ./images/project7-mob2.jpg 2x" media="(max-width:767px)">
+                        <source srcset="./images/project7-tab.jpg 1x, ./images/project7-tab2.jpg 2x" media="(max-width:1199px)">
+                        <source srcset="./images/project7-dekstop.jpg 1x, ./images/project7-dekstop2.jpg 2x" media="(min-width:1200px)">
+                         <img src="./images/pic27.jpg" alt="Журнал" width="370" >
+                         </picture> 
                     <p class="projects__overlay-text">Ресурс предлагает комплексные предложения 
                       с разным уровнем функционала и сервисов. 
                       Все это позволит посетителю получить исчерпывающие
@@ -170,7 +256,12 @@
                 <li class="projects__item">
                   <a class="projects__link" href="#">
                     <div class="projects__overlay">
-                    <img src="./images/pic28.jpg" alt="Бирка" width="370">
+                      <picture>
+                        <source srcset="./images/project8-mob.jpg 1x, ./images/project8-mob2.jpg 2x" media="(max-width:767px)">
+                        <source srcset="./images/project8-tab.jpg 1x, ./images/project8-tab2.jpg 2x" media="(max-width:1199px)">
+                        <source srcset="./images/project8-dekstop.jpg 1x, ./images/project8-dekstop2.jpg 2x" media="(min-width:1200px)">
+                         <img src="./images/pic28.jpg" alt="Бирка">
+                         </picture> 
                     <p class="projects__overlay-text">Ресурс предлагает комплексные предложения 
                       с разным уровнем функционала и сервисов. 
                       Все это позволит посетителю получить исчерпывающие
@@ -186,7 +277,12 @@
                 <li class="projects__item">
                   <a class="projects__link" href="#">
                     <div class="projects__overlay">
-                    <img src="./images/pic29.jpg" alt="Ноутбук" width="370">
+                      <picture>
+                        <source srcset="./images/project9-mob.jpg 1x, ./images/project9-mob2.jpg 2x" media="(max-width:767px)">
+                        <source srcset="./images/project9-tab.jpg 1x, ./images/project9-tab2.jpg 2x" media="(max-width:1199px)">
+                        <source srcset="./images/project9-dekstop.jpg 1x, ./images/project9-dekstop2.jpg 2x" media="(min-width:1200px)">
+                         <img src="./images/pic29.jpg" alt="Ноутбук">
+                         </picture> 
                     <p class="projects__overlay-text">Ресурс предлагает комплексные предложения 
                       с разным уровнем функционала и сервисов. 
                       Все это позволит посетителю получить исчерпывающие
@@ -205,7 +301,8 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <div class="footer-style">
+        <div class="footer__style">
+          <div class="footer__tablet">
           <div class="footer-address">
       <a class="logo footer-address__logo " href="#"> Web<span class="logo__white">Studio</span>  </a>
 <address >
@@ -216,12 +313,12 @@
       <li class="address__email">
           <a class="address__contacts address__contacts--footer" href="mailto:info@example.com">info@example.com</a> 
       </li>
-      <li>
+      <li class="address__phone" >
           <a class="address__contacts address__contacts--footer" href="tel:+380961111111">+38 096 111 11 11</a>  
       </li>
   </ul>
 </address>
-</div>
+</div> 
 <div class="cta-social">
 <h3 class="cta-social__title">присоединяйтесь</h3>
   <ul class="cta-social__list">
@@ -255,6 +352,7 @@
     </li>
   </ul>
 </div>
+</div>
   <form class="footer-form" name="subscribe-form" action="#" autocomplete="off" novalidate>
    <label class="footer-form__label" for="subscribe">Подпишитесь на рассылку</label> 
    <div class="footer-form__cta">
@@ -270,5 +368,7 @@
 </div>
   </div>
   </footer>
+  <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

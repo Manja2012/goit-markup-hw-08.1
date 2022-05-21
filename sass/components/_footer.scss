@@ -5,7 +5,7 @@
     background-color: var(--footer-background-color);
  }  
 .footer__style{
-    @media screen and (min-width:480px) and (max-width:1199px){
+    @media screen and (max-width:1199px){
     align-items: center;
     text-align: center;
     }
