@@ -33,6 +33,11 @@
     margin-right: 30px;
     }
     }  
+    .team &:not(:last-child){
+        @media screen and (max-width:768px){
+        margin-bottom: 30px;
+        }
+        }  
 }
 .team__position{
     padding-top: 30px;

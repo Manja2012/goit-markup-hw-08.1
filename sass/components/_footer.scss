@@ -23,6 +23,10 @@
     }
 }
 .footer-address{
+    @media screen and (max-width:767px){
+    margin-bottom: 60px;   
+    }
+
     @media screen and (min-width:1200px){
     display: flex;
     flex-grow: 1;
@@ -92,11 +96,6 @@
     margin-top: 20px;
 }
 .cta-social__title{
-    @media screen and (max-width:767px){
-    margin-top: 60px;
-   
-    }
-   
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
